@@ -56,7 +56,7 @@ let createHeadingRow = function () {
     let firstRow = document.createElement('tr')
     table.appendChild(firstRow)
     let firstCell = document.createElement('th')
-    firstCell.textContent = " Time | "
+    firstCell.textContent = " Time"
     firstRow.appendChild(firstCell)
 
 
@@ -78,7 +78,7 @@ createHeadingRow();
 
 
 
-let seattle = new Country('Seattle ', 23, 65, 6.3, 0, 0, 0);
+let seattle = new Country('Seattle ', 23, 65, 6.3);
 seattle.perHour();
 seattle.createTabel();
 console.log(seattle);
@@ -111,7 +111,7 @@ let createFinalRow = function () {
     table.appendChild(finalRow)
     let data2 = document.createElement('th')
     finalRow.appendChild(data2)
-    data2.textContent = "Total |"
+    data2.textContent = "Total"
 
     for (let i = 0; i <= hours.length; i++) {
         let data = document.createElement('th')

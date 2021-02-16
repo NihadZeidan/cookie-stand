@@ -1,0 +1,59 @@
+*{
+    box-sizing: border-box;
+}
+
+
+
+body {
+background-color: rgba(0, 0, 0, 0.705);
+}
+
+img {
+    width:400Px;
+    height:400px;
+}
+}
+
+
+body header { 
+    text-align: center;
+    font-weight:bold;
+    font-style: oblique;
+}
+
+
+h6 a {
+    text-decoration: none;
+}
+
+h6 {
+    font-size: larger;
+    text-decoration: none;
+}
+
+
+table {
+    background-color: rgb(211, 207, 207) ;
+    border:solid;
+    border-width: 5px;
+    border-color: black;
+    position: relative;
+    right: -220px;
+    margin-top: 150px;
+    width:70%;
+    font;
+
+}
+
+table tr td {
+    border:solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+table tr th {
+    border:solid;
+    border-width: 2px;
+    border-color: black;
+
+}
