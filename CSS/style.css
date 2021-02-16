@@ -1,12 +1,48 @@
 *{
     box-sizing: border-box;
+    font-size: medium;
+    font-style: oblique;
+    color: rgba(255, 235, 205, 0.897);
 }
-
-
 
 body {
-background-color: rgba(0, 0, 0, 0.705);
+background-color: rgba(0, 0, 0, 0.897);
 }
+
+body header h1 {
+    font-size: 100px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: rgba(255, 235, 205, 0.116);
+    padding: 50px;
+}
+
+body header h2{
+    font-size: 45px;
+    margin-top: 0px;
+    text-align: center;
+    background-color: rgba(255, 235, 205, 0.116);
+    padding: 50px;
+}
+
+nav {
+    position: relative;
+}
+
+nav ul li a {
+font-size: 30px;
+text-decoration: none;
+position: relative;
+float:right;
+}
+
+nav ul li :hover {
+    /* background-color: black; */
+    color: black;
+    text-underline-position: black;
+
+}
+
 
 img {
     width:400Px;
