@@ -10,18 +10,23 @@ background-color: rgba(0, 0, 0, 0.897);
 }
 
 body header h1 {
-    font-size: 100px;
+    font-size: 70px;
     margin-top: 0px;
     text-align: center;
     background-color: rgb(105, 30, 30); 
     padding: 20px;
 }
 body header h2{
-    font-size: 45px;
-    margin-top: 0px;
+    font-size: 20px;
+    margin-top: 10px;
     text-align: center;
+    width: 50%;
     background-color: rgb(105, 30, 30); 
     padding: 15px;
+    position: relative;
+    position: center;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 
@@ -30,13 +35,13 @@ body header h2{
 
 
 nav ul li  {
-    font-size: 30px;
     text-decoration: none;
-    /* position: sticky; */
     margin-top: 20px;
+    display: inline-block;
 }
+
 nav ul li a {
-    font-size: 30px;
+    font-size: 20px;
     text-decoration: none;
     /* position: sticky; */
     margin-top: 20px;
@@ -49,14 +54,12 @@ nav ul li :hover {
 }
 
 
-
 main ul.locations {
     width: 30%;
     padding: 10px;
     margin-top: 0px;
     font-size: 20px;
     position: relative;
-    /* float: left; */
     background-color: rgb(0, 0, 0);
     color:blanchedalmond; 
     
@@ -209,10 +212,10 @@ table tr td {
 
 table tr th {
     border:solid;
-    border-width: 2px;
-    border-color: black;
-    font-size: 25px;
-    padding: 1px;
+    /* border-width: 5px; */
+    border-color: rgb(10, 9, 9);
+    font-size: 20px;
+    padding: 7px;
 
 }
 
@@ -221,4 +224,58 @@ footer p {
     margin-top: 50px;
     margin-bottom: 20px;
     font-size: 20px
+}
+
+
+main form#createCity label{
+    margin-top: 20px;
+    padding-top: 100px;
+    font-size: 20px;
+    text-align: center;
+    padding-left: 50px;
+}
+
+main form#createCity {
+    border: solid whitesmoke;
+    width:40%;
+    margin-top: 30px;
+    position: relative;
+    position: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding:0%;
+    font-size: 20px;
+    text-align: justify;
+    padding-left: 50px;
+    margin-bottom: 30px;
+}
+
+main form#createCity input:first-child{
+    text-align: left;
+    padding-left: 50px;
+
+}
+
+main form#createCity input{
+    
+    padding:5px;
+    text-align: left;
+    color: black
+
+}
+
+
+main form#createCity input:last-of-type{
+    color: black;
+    padding: 20px;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    text-align:justify;
+position: relative;
+position:center;
+margin-left: auto;
+margin-right: auto;  
+margin-bottom: 20px;
+    
 }
