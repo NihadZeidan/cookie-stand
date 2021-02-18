@@ -123,16 +123,16 @@ function addingLocation (event) {
     event.preventDefault();
 
     let name = event.target.locationName.value;
-    console.log(name);
+    // console.log(name);
 
     let min = event.target.minCustomer.value;
-    console.log(min);
+    // console.log(min);
 
     let max = event.target.maxCustomer.value;
-    console.log(max);
+    // console.log(max);
 
     let avg = event.target.avgCustomer.value;
-    console.log(avg);
+    // console.log(avg);
 
     let locationAddedByUser = new Country(name, min, max, avg);
     locationAddedByUser.perHour();
