@@ -1,5 +1,4 @@
 *{
-    box-sizing: border-box;
     font-size: medium;
     font-style: oblique;
     color: rgba(255, 235, 205, 0.897);
@@ -36,19 +35,16 @@ body header h2{
 
 nav ul li  {
     text-decoration: none;
-    margin-top: 20px;
-    display: inline-block;
+    margin-top: 15px;
 }
 
 nav ul li a {
     font-size: 20px;
     text-decoration: none;
-    /* position: sticky; */
-    margin-top: 20px;
     padding: 19px;
 }
+
 nav ul li :hover {
-    /* background-color: black; */
     color: rgb(0, 0, 0);
    background-color:rgba(255, 235, 205, 0.74);
 }
@@ -62,7 +58,6 @@ main ul.locations {
     position: relative;
     background-color: rgb(0, 0, 0);
     color:blanchedalmond; 
-    
     }
 
     main ul li {
@@ -78,8 +73,6 @@ main div {
     text-align: left;
     margin-top: 5px;
     font-size: 20px;
-    /* position: relative; */
-    /* float: right; */
     background-color: rgb(0, 0, 0);
     width: 30%;
     padding: 10px;
@@ -198,9 +191,21 @@ table {
     position: absolute;
      right: 50px; 
     margin-top: 250px;
-    
-
 }
+
+th:hover {
+    font-size: 25px;
+}
+
+td:hover {
+
+font-size: 20px;
+    }
+
+    tr:hover {
+        background-color: rgb(105, 30, 30); 
+    }
+
 
 table tr td {
     border:solid;
