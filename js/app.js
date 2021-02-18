@@ -89,11 +89,12 @@ for (let i = 0; i < city.length; i++) {
 
 
 
-let finalRow = document.createElement('tr')
-table.appendChild(finalRow)
 
 
 function createFinalRow () {
+    let finalRow = document.createElement('tr')
+    table.appendChild(finalRow)
+    
     let totalDataFirstCell = document.createElement('th')
     finalRow.appendChild(totalDataFirstCell)
     totalDataFirstCell.textContent = "Total"
@@ -140,6 +141,7 @@ function addingLocation (event) {
 
     let toClearTheTable = document.getElementById('parent')
     toClearTheTable.textContent = " ";
+    createHeadingRow();
     
     for (let i = 0; i < city.length; i++) {
         city[i].perHour();
