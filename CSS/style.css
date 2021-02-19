@@ -1,7 +1,8 @@
 *{
-    font-size: medium;
-    font-style: oblique;
+    font-size: 10px;
+    /* font-style: oblique; */
     color: rgba(255, 235, 205, 0.897);
+    font-family:'Times New Roman', Times, serif;
 }
 
 body {
@@ -9,15 +10,21 @@ background-color: rgba(0, 0, 0, 0.897);
 }
 
 body header h1 {
-    font-size: 70px;
-    margin-top: 0px;
+    font-size: 60px;
+    border-radius: 50px;
     text-align: center;
     background-color: rgb(105, 30, 30); 
-    padding: 20px;
+    padding: 10px;
+    margin-top:0%;
+    margin-bottom: 0%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
 }
+
 body header h2{
     font-size: 20px;
-    margin-top: 10px;
+    border-radius: 50px;
     text-align: center;
     width: 50%;
     background-color: rgb(105, 30, 30); 
@@ -41,12 +48,13 @@ nav ul li  {
 nav ul li a {
     font-size: 20px;
     text-decoration: none;
-    padding: 19px;
+    padding: 15px;
 }
 
 nav ul li :hover {
-    color: rgb(0, 0, 0);
-   background-color:rgba(255, 235, 205, 0.74);
+    color: rgb(224, 224, 224);
+    background-color: rgb(105, 30, 30); 
+   border-radius: 50px;
 }
 
 
@@ -61,57 +69,71 @@ main ul.locations {
     }
 
     main ul li {
+        margin-right: auto;
+        margin-left: auto;
         font-size: 18px;
-        padding-left: 20px;
         margin-top: 5px;
         font-weight: normal;
     }
 
 
 
-main div {
-    text-align: left;
-    margin-top: 5px;
-    font-size: 20px;
-    background-color: rgb(0, 0, 0);
-    width: 30%;
-    padding: 10px;
-    }
     
-    p.info {
-        text-align:left;
-    }
+    
+main div#info ul {
+    text-align: left;
+    font-size: 30px;
+    margin-left: 40px;
+    width: 28%;
+    background-color: rgb(0, 0, 0);
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+float: left;
 
+}
 
+main div#info ul.info{
+    position: absolute;
+    margin-top: 20%;
+}
 
-main p {
-    font-size: 25px;
-    margin-top: 20px;
-    font-weight: bold;
+main div#info p {
+    text-align: left;
+    padding-left:20px;
+    font-size: 30px;
+
 }
 
 
-
-
-
-
-
-
-
+body main p.discreption {
+    font-size: 25px;
+    width: 60%;
+    position: absolute;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10%;
+    padding-left:40px;
+}
 
 
 main h4{
-    font-size: 70px;
+    font-size: 40px;
     padding: 20px;
-    margin-top: 100px;
+    width: 20%;
+    border-radius: 50px;
+    margin-top: 550px;
     text-align: center;
     background-color: rgb(105, 30, 30); 
+    margin-left: auto;
+    margin-right: auto;
     }
     
 
+
  img:first-child { 
 
-     width: 750Px;
+     width: 720px;
     height: 250px;
 } 
 img:nth-child(2) { 
@@ -154,16 +176,6 @@ img:nth-child(7) {
 
 
 
-
-
-
-
-
-
-
-
-
-
 body header { 
     text-align: center;
     font-weight:bold;
@@ -187,10 +199,11 @@ table {
     background-color: rgb(53, 28, 28) ;
     border:solid;
     border-width: 10px;
-    border-color: black;
-    position: absolute;
-     right: 50px; 
-    margin-top: 250px;
+    border-color: rgb(88, 76, 76);
+     margin-left: auto;
+     margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 30px;
 }
 
 th:hover {
@@ -202,7 +215,7 @@ td:hover {
 font-size: 20px;
     }
 
-    tr:hover {
+tr:hover {
         background-color: rgb(105, 30, 30); 
     }
 
@@ -213,11 +226,11 @@ table tr td {
     border-color: black;
     font-size: 25px;
     padding: 2px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 table tr th {
     border:solid;
-    /* border-width: 5px; */
     border-color: rgb(10, 9, 9);
     font-size: 20px;
     padding: 7px;
@@ -232,55 +245,53 @@ footer p {
 }
 
 
+main form#createCity {
+    border: solid brown;
+    width:700px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:20PX;
+}
+
 main form#createCity label{
-    margin-top: 20px;
-    padding-top: 100px;
-    font-size: 20px;
+    font-size: 25px;
     text-align: center;
     padding-left: 50px;
 }
 
-main form#createCity {
-    border: solid whitesmoke;
-    width:40%;
-    margin-top: 30px;
-    position: relative;
-    position: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding:0%;
-    font-size: 20px;
-    text-align: justify;
-    padding-left: 50px;
-    margin-bottom: 30px;
-}
-
 main form#createCity input:first-child{
     text-align: left;
-    padding-left: 50px;
 
 }
 
 main form#createCity input{
-    
-    padding:5px;
+    width:200px;
+    padding:10px;
     text-align: left;
-    color: black
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
 
 
 main form#createCity input:last-of-type{
     color: black;
-    padding: 20px;
     font-size: 20px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold;
-    text-align:justify;
-position: relative;
-position:center;
-margin-left: auto;
+    text-align:center;
+    display: block;
+margin-left: 60%;
 margin-right: auto;  
 margin-bottom: 20px;
     
 }
+
+main form#createCity input:last-of-type:hover{
+    background-color: brown;}
+
+
+main  fieldset {
+        border:none;
+    }
