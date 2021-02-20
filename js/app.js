@@ -25,7 +25,6 @@ Country.prototype.perHour = function () {
         this.randomCustomers = (randomCus(this.minCustomers, this.maxCustomers));
         this.cookiesPerHour[j] = Math.floor(this.avgCookiesPerCus * this.randomCustomers);
         this.total += this.cookiesPerHour[j];
-        // this.cookiesPerHour.push(this.total);
 
     }
 
@@ -45,9 +44,9 @@ Country.prototype.createTabel = function () {
         row.appendChild(rowData)
     }
 
-        let dailyTotal = document.createElement('td')
-        dailyTotal.textContent = this.total
-        row.appendChild(dailyTotal);
+    let dailyTotal = document.createElement('td')
+    dailyTotal.textContent = this.total
+    row.appendChild(dailyTotal);
 
 }
 
@@ -96,35 +95,37 @@ for (let i = 0; i < city.length; i++) {
 
 
 
-function createFinalRow () {
+function createFinalRow() {
     let finalRow = document.createElement('tr')
     table.appendChild(finalRow)
-    
+
     let totalDataFirstCell = document.createElement('th')
     finalRow.appendChild(totalDataFirstCell)
     totalDataFirstCell.textContent = "Total"
-    
+
     for (let i = 0; i < hours.length; i++) {
         let totalData = document.createElement('th');
         finalRow.appendChild(totalData);
         let totalOfEach = 0;
-        
-        
+
+
         for (let y = 0; y < city.length; y++) {
-            
+
             totalOfEach += city[y].cookiesPerHour[i]
             totalData.textContent = totalOfEach
-            
+
         }
+
     }
 
-    let TotalOfTotal = document.createElement('th')
-    finalRow.appendChild(TotalOfTotal)
-    
-    for (let x = 0 ; x < city.length; x++) {
-        TotalOfTotal.textContent += city[x].total
+    let totalOfTotalData = document.createElement('th')
+    finalRow.appendChild(totalOfTotalData)
+    let totalOfTotal = 0;
+
+    for (let i = 0; i < city.length; i++) {
+        totalOfTotal += city[i].total
+        totalOfTotalData.textContent = totalOfTotal
     }
-    
 }
 
 
@@ -136,7 +137,7 @@ let createForm = document.getElementById('createCity');
 createForm.addEventListener('submit', addingLocation);
 
 
-function addingLocation (event) {
+function addingLocation(event) {
     event.preventDefault();
 
     let name = event.target.locationName.value;
@@ -156,11 +157,11 @@ function addingLocation (event) {
     let toClearTheTable = document.getElementById('parent')
     toClearTheTable.textContent = " ";
     createHeadingRow();
-    
+
     for (let i = 0; i < city.length; i++) {
         city[i].perHour();
         city[i].createTabel();
     }
-    
+
     createFinalRow();
 }  
