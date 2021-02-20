@@ -25,7 +25,7 @@ Country.prototype.perHour = function () {
         this.randomCustomers = (randomCus(this.minCustomers, this.maxCustomers));
         this.cookiesPerHour[j] = Math.floor(this.avgCookiesPerCus * this.randomCustomers);
         this.total += this.cookiesPerHour[j];
-        this.cookiesPerHour.push(this.total);
+        // this.cookiesPerHour.push(this.total);
 
     }
 
@@ -39,11 +39,16 @@ Country.prototype.createTabel = function () {
     row.appendChild(data)
     data.textContent = `${this.locationName}`
 
-    for (let i = 0; i <= hours.length; i++) {
+    for (let i = 0; i < hours.length; i++) {
         let rowData = document.createElement('td')
         rowData.textContent = this.cookiesPerHour[i]
         row.appendChild(rowData)
     }
+
+        let dailyTotal = document.createElement('td')
+        dailyTotal.textContent = this.total
+        row.appendChild(dailyTotal);
+
 }
 
 
@@ -98,19 +103,30 @@ function createFinalRow () {
     let totalDataFirstCell = document.createElement('th')
     finalRow.appendChild(totalDataFirstCell)
     totalDataFirstCell.textContent = "Total"
-
-    for (let i = 0; i <= hours.length; i++) {
+    
+    for (let i = 0; i < hours.length; i++) {
         let totalData = document.createElement('th');
         finalRow.appendChild(totalData);
         let totalOfEach = 0;
-
+        
+        
         for (let y = 0; y < city.length; y++) {
-
+            
             totalOfEach += city[y].cookiesPerHour[i]
             totalData.textContent = totalOfEach
-       }
+            
+        }
     }
+
+    let TotalOfTotal = document.createElement('th')
+    finalRow.appendChild(TotalOfTotal)
+    
+    for (let x = 0 ; x < city.length; x++) {
+        TotalOfTotal.textContent += city[x].total
+    }
+    
 }
+
 
 createFinalRow();
 
@@ -136,8 +152,6 @@ function addingLocation (event) {
     // console.log(avg);
 
     let locationAddedByUser = new Country(name, min, max, avg);
-    locationAddedByUser.perHour();
-    locationAddedByUser.createTabel();
 
     let toClearTheTable = document.getElementById('parent')
     toClearTheTable.textContent = " ";
