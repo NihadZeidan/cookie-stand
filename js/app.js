@@ -1,9 +1,8 @@
 'use strict';
 
 function randomCus(min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 
 let hours = ['6:00AM', '7:00AM', '8:00AM', '9:00AM', '10:00AM', '11:00AM', '12:00PM', '1:00PM', '2:00PM', '3:00PM', '4:00PM', '5:00PM', '6:00PM', '7:00PM'];
 
@@ -47,6 +46,7 @@ Country.prototype.createTabel = function () {
     let dailyTotal = document.createElement('td')
     dailyTotal.textContent = this.total
     row.appendChild(dailyTotal);
+    this.total= 0
 
 }
 
@@ -121,10 +121,13 @@ function createFinalRow() {
     let totalOfTotalData = document.createElement('th')
     finalRow.appendChild(totalOfTotalData)
     let totalOfTotal = 0;
-
+    
     for (let i = 0; i < city.length; i++) {
-        totalOfTotal += city[i].total
-        totalOfTotalData.textContent = totalOfTotal
+
+        for (let y = 0; y < hours.length; y++) {
+            totalOfTotal += city[i].cookiesPerHour[y]
+            totalOfTotalData.textContent = totalOfTotal
+        }
     }
 }
 
